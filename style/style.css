@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.today {
+  background-color: rgb(116, 151, 198);
+}
+
+.day-weather {
+  border: 1px black solid;
+}/*# sourceMappingURL=style.css.map */
