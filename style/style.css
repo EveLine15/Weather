@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.day-weather, .today {
+  font-family: "Roboto", serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +18,49 @@
 
 .today {
   background-color: rgb(116, 151, 198);
+  width: 100%;
+  height: 300px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 10px 10px 10px;
+}
+.today .city-time {
+  margin-top: 10px;
+}
+.today .weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.today .weather img {
+  margin-bottom: 10px;
+}
+.today .wind {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast {
+  border: 2px rgb(116, 151, 198) solid;
 }
 
 .day-weather {
-  border: 1px black solid;
+  font-size: 17px;
+  border-top: 2px rgb(116, 151, 198) solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+}
+.day-weather .box-sizing {
+  width: 93px;
+}
+.day-weather .center-img {
+  display: flex;
+  justify-content: center;
+}
+.day-weather .center-temp {
+  text-align: end;
 }/*# sourceMappingURL=style.css.map */

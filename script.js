@@ -39,12 +39,14 @@ const forecastWeater = (data) => {
     for(let i = 8; i < data.list.length; i+=8){
         const template = `
         <div class="day-weather">
-            <div>
+            <div class="box-sizing">
                 <p>${data.list[i].dt_txt.slice(0, 10)}</p>
                 <p>${data.list[0].dt_txt.slice(11)}</p>
             </div>
-            <img src="${setPictureWeather(data.list[i].weather[0].main)}" alt="">
-            <p>${(+data.list[i].main.temp-273.15).toFixed(1)}°C</p>
+            <div class="box-sizing center-img">
+                <img src="${setPictureWeather(data.list[i].weather[0].main)}" alt="weather-img">
+            </div>
+            <p class="box-sizing center-temp">${(+data.list[i].main.temp-273.15).toFixed(1)}°C</p>
         </div>
     `
 
@@ -60,11 +62,11 @@ const setPictureWeather = (weather) => {
             break;
 
         case 'Clear':
-            return './images/sun-48.png';
+            return './images/sun-50.png';
             break;
 
             case 'Snow':
-        return './images/clouds-50.png';
+        return './images/snow-50.png';
         break;
     
         default:
