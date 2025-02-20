@@ -1,13 +1,13 @@
 const todayBlock = document.querySelector('.today');
 const forecastBlock = document.querySelector('.forecast');
 
-fetch('https://api.openweathermap.org/data/2.5/forecast?q=Minsk&appid=a94d0a5ac08570add4b47b8da933f247')
+fetch('https://api.openweathermap.org/data/2.5/forecast?q=Minsk&appid=a94d0a5ac08570add4b47b8da933f247+')
 .then((response) =>  response.json())
 .then((data) => {
     todayWeater(data);
-    //8
     forecastWeater(data);
-});
+})
+.catch(errorMessage())
 
 const todayWeater = (data) => {
     const date = new Date();
@@ -72,4 +72,8 @@ const setPictureWeather = (weather) => {
         default:
             break;
     }
+}
+
+function errorMessage(){
+    todayBlock.innerHTML = `<p>Error</p>`
 }
